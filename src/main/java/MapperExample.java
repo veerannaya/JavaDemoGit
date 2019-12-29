@@ -22,6 +22,9 @@ public class MapperExample {
         names.stream().filter(MapperExample::isNotsam)
                 .map(User::new)
                 .forEach(System.out::println);
+
+        System.out.println("list of users");
+        names.stream().map(User::new).forEach(System.out::println);
     }
     private static boolean isNotsam(String name){
         return  !name.equals("sam");
